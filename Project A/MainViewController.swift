@@ -19,6 +19,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
         view.addSubview(homeFeedTable)
+        
+        homeFeedTable.delegate = self
+        homeFeedTable.dataSource = self
     }
 
     override func viewDidLayoutSubviews() {
@@ -27,3 +30,14 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Hello World"
+        return cell
+    }
+}
