@@ -11,7 +11,7 @@ class MainViewController: UIViewController {
 
     private let homeFeedTable: UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(TwoColumnTableViewCell.self, forCellReuseIdentifier: TwoColumnTableViewCell.identifier)
         return table
     }()
     
@@ -36,8 +36,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello World"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TwoColumnTableViewCell.identifier, for: indexPath) as? TwoColumnTableViewCell else {
+            return UITableViewCell()
+        }
+        
         return cell
     }
 }

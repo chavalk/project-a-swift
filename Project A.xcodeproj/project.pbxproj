@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE8269CE293EF46D00197E22 /* TwoColumnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */; };
 		BEE829262939CB0500F1975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE829252939CB0500F1975C /* AppDelegate.swift */; };
 		BEE829282939CB0500F1975C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE829272939CB0500F1975C /* SceneDelegate.swift */; };
 		BEE8292A2939CB0500F1975C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE829292939CB0500F1975C /* MainViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnTableViewCell.swift; sourceTree = "<group>"; };
 		BEE829222939CB0500F1975C /* Project A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE829252939CB0500F1975C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE829272939CB0500F1975C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE8269CC293EF1DF00197E22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BEE829192939CB0500F1975C = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		BEE829242939CB0500F1975C /* Project A */ = {
 			isa = PBXGroup;
 			children = (
+				BE8269CC293EF1DF00197E22 /* Views */,
 				BEE829252939CB0500F1975C /* AppDelegate.swift */,
 				BEE829272939CB0500F1975C /* SceneDelegate.swift */,
 				BEE829292939CB0500F1975C /* MainViewController.swift */,
@@ -136,6 +147,7 @@
 			files = (
 				BEE8292A2939CB0500F1975C /* MainViewController.swift in Sources */,
 				BEE829262939CB0500F1975C /* AppDelegate.swift in Sources */,
+				BE8269CE293EF46D00197E22 /* TwoColumnTableViewCell.swift in Sources */,
 				BEE829282939CB0500F1975C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
