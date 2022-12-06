@@ -22,6 +22,9 @@ class MainViewController: UIViewController {
         
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
+        
+        let headerView = HeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 30))
+        homeFeedTable.tableHeaderView = headerView
     }
 
     override func viewDidLayoutSubviews() {
