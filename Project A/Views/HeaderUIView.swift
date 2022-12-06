@@ -25,13 +25,14 @@ class HeaderUIView: UIView {
         addSubview(nameLabel)
         
         poundLabel.text = "#"
-        
+        poundLabel.font = .systemFont(ofSize: 18, weight: .bold)
         nameLabel.text = "Table"
+        nameLabel.font = .systemFont(ofSize: 18, weight: .bold)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        poundLabel.frame = CGRect(x: 5, y: 5, width: 10, height: 100)
+        poundLabel.frame = CGRect(x: 5, y: 5, width: 15, height: 100)
         nameLabel.frame = CGRect(x: 40, y: 5, width: 300, height: 100)
     }
 
