@@ -19,8 +19,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "All Tables"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.largeTitleDisplayMode = .always
         view.addSubview(homeFeedTable)
         
         homeFeedTable.delegate = self
