@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE095146294108A000E8A69F /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE095145294108A000E8A69F /* Row.swift */; };
 		BE8269CE293EF46D00197E22 /* TwoColumnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */; };
 		BE8269D2293F108D00197E22 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8269D1293F108D00197E22 /* HeaderUIView.swift */; };
 		BEE829262939CB0500F1975C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE829252939CB0500F1975C /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE095145294108A000E8A69F /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnTableViewCell.swift; sourceTree = "<group>"; };
 		BE8269D1293F108D00197E22 /* HeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
 		BEE829222939CB0500F1975C /* Project A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE0951442941085500E8A69F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE095145294108A000E8A69F /* Row.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BE8269CC293EF1DF00197E22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 		BEE829242939CB0500F1975C /* Project A */ = {
 			isa = PBXGroup;
 			children = (
+				BE0951442941085500E8A69F /* Model */,
 				BE8269CC293EF1DF00197E22 /* Views */,
 				BEE829252939CB0500F1975C /* AppDelegate.swift */,
 				BEE829272939CB0500F1975C /* SceneDelegate.swift */,
@@ -152,6 +163,7 @@
 				BEE829262939CB0500F1975C /* AppDelegate.swift in Sources */,
 				BE8269CE293EF46D00197E22 /* TwoColumnTableViewCell.swift in Sources */,
 				BEE829282939CB0500F1975C /* SceneDelegate.swift in Sources */,
+				BE095146294108A000E8A69F /* Row.swift in Sources */,
 				BE8269D2293F108D00197E22 /* HeaderUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
