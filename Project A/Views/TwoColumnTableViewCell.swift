@@ -11,16 +11,16 @@ class TwoColumnTableViewCell: UITableViewCell {
 
     static let identifier = "TwoColumnTableViewCell"
     
-    private let rank = UILabel()
-    private let name = UILabel()
+    private let rankLabel = UILabel()
+    private let nameLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(rank)
-        contentView.addSubview(name)
+        contentView.addSubview(rankLabel)
+        contentView.addSubview(nameLabel)
         
-        setRankConstraints()
-        setNameConstraints()
+        setRankLabelConstraints()
+        setNameLabelConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -28,15 +28,21 @@ class TwoColumnTableViewCell: UITableViewCell {
     }
     
     func set(row: Row) {
-        rank.text = row.rank
-        name.text = row.name
+        rankLabel.text = row.rank
+        nameLabel.text = row.name
     }
     
-    func setRankConstraints() {
-        rank.frame = CGRect(x: 5, y: 5, width: 10, height: 100)
+    func setRankLabelConstraints() {
+        rankLabel.translatesAutoresizingMaskIntoConstraints = false
+        rankLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        rankLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+        rankLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
-    func setNameConstraints() {
-        name.frame = CGRect(x: 40, y: 5, width: 300, height: 100)
+    func setNameLabelConstraints() {
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: rankLabel.trailingAnchor, constant: 25).isActive = true
+        nameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
 }
