@@ -10,9 +10,11 @@ import UIKit
 class MainViewController: UIViewController {
 
     private let homeFeedTable = UITableView()
+    var rows: [Row] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rows = fetchData()
         configureTableView()
     }
 
@@ -36,7 +38,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
