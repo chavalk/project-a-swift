@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "All Tables"
         rows = fetchData()
         configureTableView()
     }
@@ -22,7 +23,7 @@ class MainViewController: UIViewController {
         view.addSubview(homeFeedTable)
         setTableViewDelegates()
         homeFeedTable.rowHeight = 100
-        // Register cells
+        homeFeedTable.register(TwoColumnTableViewCell.self, forCellReuseIdentifier: TwoColumnTableViewCell.identifier)
     }
     
     func setTableViewDelegates() {
