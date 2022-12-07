@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "All Tables"
+        title = "Tables"
         rows = fetchData()
         configureTableView()
     }
