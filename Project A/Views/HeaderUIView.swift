@@ -26,7 +26,7 @@ class HeaderUIView: UIView {
         
         poundLabel.text = "#"
         poundLabel.font = .systemFont(ofSize: 18, weight: .bold)
-        nameLabel.text = "Table"
+        nameLabel.text = "Table Name"
         nameLabel.font = .systemFont(ofSize: 18, weight: .bold)
     }
     
