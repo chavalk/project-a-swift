@@ -11,31 +11,32 @@ class TwoColumnTableViewCell: UITableViewCell {
 
     static let identifier = "TwoColumnTableViewCell"
     
-    private let firstLabel = UILabel()
-    private let secondLabel = UILabel()
+    private let rank = UILabel()
+    private let name = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(firstLabel)
-        contentView.addSubview(secondLabel)
+        contentView.addSubview(rank)
+        contentView.addSubview(name)
         
-        setFirstLabelConstraints()
-        setSecondLabelConstraints()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
+        setRankConstraints()
+        setNameConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError()
     }
     
-    func setFirstLabelConstraints() {
-        firstLabel.frame = CGRect(x: 5, y: 5, width: 10, height: 100)
+    func set(row: Row) {
+        rank.text = row.rank
+        name.text = row.name
     }
     
-    func setSecondLabelConstraints() {
-        secondLabel.frame = CGRect(x: 40, y: 5, width: 300, height: 100)
+    func setRankConstraints() {
+        rank.frame = CGRect(x: 5, y: 5, width: 10, height: 100)
+    }
+    
+    func setNameConstraints() {
+        name.frame = CGRect(x: 40, y: 5, width: 300, height: 100)
     }
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 struct Row {
-    let rank: Int
+    let rank: String
     let name: String
 }
