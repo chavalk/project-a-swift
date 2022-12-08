@@ -49,6 +49,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BE09514729419BD700E8A69F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE09514829419C0200E8A69F /* General */,
+				BE09514929419C1100E8A69F /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BE09514829419C0200E8A69F /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		BE09514929419C1100E8A69F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BEE829292939CB0500F1975C /* MainViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		BE8269CC293EF1DF00197E22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +103,9 @@
 			children = (
 				BE0951442941085500E8A69F /* Model */,
 				BE8269CC293EF1DF00197E22 /* Views */,
+				BE09514729419BD700E8A69F /* Controllers */,
 				BEE829252939CB0500F1975C /* AppDelegate.swift */,
 				BEE829272939CB0500F1975C /* SceneDelegate.swift */,
-				BEE829292939CB0500F1975C /* MainViewController.swift */,
 				BEE8292E2939CB0700F1975C /* Assets.xcassets */,
 				BEE829302939CB0700F1975C /* LaunchScreen.storyboard */,
 				BEE829332939CB0700F1975C /* Info.plist */,
