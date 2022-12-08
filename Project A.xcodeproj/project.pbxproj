@@ -17,6 +17,7 @@
 		BEE8292A2939CB0500F1975C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE829292939CB0500F1975C /* MainViewController.swift */; };
 		BEE8292F2939CB0700F1975C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE8292E2939CB0700F1975C /* Assets.xcassets */; };
 		BEE829322939CB0700F1975C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE829302939CB0700F1975C /* LaunchScreen.storyboard */; };
+		BEFF15AE2942731300CA6CD1 /* ThreeColumnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFF15AD2942731300CA6CD1 /* ThreeColumnTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BEE8292E2939CB0700F1975C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEE829312939CB0700F1975C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEE829332939CB0700F1975C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEFF15AD2942731300CA6CD1 /* ThreeColumnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumnTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,9 @@
 		BE8269CC293EF1DF00197E22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */,
 				BE8269D1293F108D00197E22 /* HeaderUIView.swift */,
+				BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */,
+				BEFF15AD2942731300CA6CD1 /* ThreeColumnTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE8292A2939CB0500F1975C /* MainViewController.swift in Sources */,
+				BEFF15AE2942731300CA6CD1 /* ThreeColumnTableViewCell.swift in Sources */,
 				BE09514B29419CF000E8A69F /* TableViewController.swift in Sources */,
 				BEE829262939CB0500F1975C /* AppDelegate.swift in Sources */,
 				BE8269CE293EF46D00197E22 /* TwoColumnTableViewCell.swift in Sources */,
