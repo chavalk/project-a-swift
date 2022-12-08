@@ -22,11 +22,18 @@ class TableViewController: UIViewController {
     func configureTableView() {
         view.addSubview(tableView)
         setTableViewDelegates()
+        tableView.rowHeight = 50
+        tableView.register(ThreeColumnTableViewCell.self, forCellReuseIdentifier: ThreeColumnTableViewCell.identifier)
     }
     
     func setTableViewDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
     }
 }
 
