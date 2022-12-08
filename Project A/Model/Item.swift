@@ -9,6 +9,6 @@ import Foundation
 
 struct Item {
     let rank: String
-    let name: String
-    let nameSecond: String
+    let firstColumn: String
+    let secondColumn: String
 }

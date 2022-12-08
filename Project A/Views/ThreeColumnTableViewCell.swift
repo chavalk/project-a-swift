@@ -30,6 +30,12 @@ class ThreeColumnTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(item: Item) {
+        rankLabel.text = item.rank
+        firstColumnLabel.text = item.firstColumn
+        secondColumnLabel.text = item.secondColumn
+    }
+    
     func setRankLabelConstraints() {
         rankLabel.translatesAutoresizingMaskIntoConstraints = false
         rankLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
