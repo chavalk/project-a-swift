@@ -9,34 +9,38 @@ import UIKit
 
 class HeaderUIView: UIView {
 
-    private let poundLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    private let rankLabel = UILabel()
+    private let nameLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(poundLabel)
+        addSubview(rankLabel)
         addSubview(nameLabel)
         
-        poundLabel.text = "#"
-        poundLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        setRankLabelConstraints()
+        setNameLabelConstraints()
+        
+        rankLabel.text = "#"
+        rankLabel.font = .systemFont(ofSize: 18, weight: .bold)
         nameLabel.text = "Table Name"
         nameLabel.font = .systemFont(ofSize: 18, weight: .bold)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        poundLabel.frame = CGRect(x: 5, y: 5, width: 15, height: 100)
-        nameLabel.frame = CGRect(x: 40, y: 5, width: 300, height: 100)
     }
 
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    func setRankLabelConstraints() {
+        rankLabel.translatesAutoresizingMaskIntoConstraints = false
+        rankLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        rankLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+        rankLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    }
+    
+    func setNameLabelConstraints() {
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: rankLabel.trailingAnchor, constant: 25).isActive = true
+        nameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
 }

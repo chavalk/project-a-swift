@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    private let homeFeedTable = UITableView()
+    private let homeFeedTable = UITableView(frame: .zero, style: .grouped)
     var rows: [Row] = []
     
     override func viewDidLoad() {
@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
         title = "Tables"
         rows = fetchData()
         configureTableView()
+        let headerView = HeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
+        homeFeedTable.tableHeaderView = headerView
     }
 
     func configureTableView() {
