@@ -53,7 +53,7 @@ class ThreeColumnTableViewCell: UITableViewCell {
     func setSecondColumnLabelConstraints() {
         secondColumnLabel.translatesAutoresizingMaskIntoConstraints = false
         secondColumnLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        secondColumnLabel.leadingAnchor.constraint(equalTo: rankLabel.trailingAnchor, constant: 25).isActive = true
         secondColumnLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        secondColumnLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60).isActive = true
     }
 }
