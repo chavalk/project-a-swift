@@ -17,7 +17,7 @@ class TableViewController: UIViewController {
         title = "Countries By GDP Nominal"
         items = fetchData()
         configureTableView()
-        let headerView = ThreeColumnHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
+        let headerView = ThreeColumnHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 80))
         tableView.tableHeaderView = headerView
     }
     

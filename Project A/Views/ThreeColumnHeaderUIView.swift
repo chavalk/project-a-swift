@@ -27,8 +27,9 @@ class ThreeColumnHeaderUIView: UIView {
         rankLabel.font = .systemFont(ofSize: 18, weight: .bold)
         firstColumnLabel.text = "Country"
         firstColumnLabel.font = .systemFont(ofSize: 18, weight: .bold)
-        secondColumnLabel.text = "2022 Estimate (US$ trillion)"
+        secondColumnLabel.text = "2022 Estimate \n(US$ trillion)"
         secondColumnLabel.font = .systemFont(ofSize: 18, weight: .bold)
+        secondColumnLabel.numberOfLines = 0
     }
     
     required init?(coder: NSCoder) {
@@ -52,7 +53,7 @@ class ThreeColumnHeaderUIView: UIView {
     func setSecondColumnLabelConstraints() {
         secondColumnLabel.translatesAutoresizingMaskIntoConstraints = false
         secondColumnLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        secondColumnLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        secondColumnLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60).isActive = true
+        secondColumnLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        secondColumnLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
     }
 }
