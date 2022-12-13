@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     private let homeFeedTable = UITableView(frame: .zero, style: .grouped)
     var rows: [Row] = []
@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rows.count
     }
@@ -57,7 +57,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension MainViewController {
+extension HomeViewController {
     
     func fetchData() -> [Row] {
         let row1 = Row(rank: "1", name: "Countries By GDP Nominal")
