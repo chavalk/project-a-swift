@@ -1,13 +1,13 @@
 //
-//  Row.swift
+//  Table.swift
 //  Project A
 //
-//  Created by Jose Garcia on 12/7/22.
+//  Created by Jose Garcia on 1/9/23.
 //
 
 import Foundation
 
-struct Row {
-    let rank: String
-    let name: String
+struct Table: Codable {
+    let number: String
+    let tableName: String
 }
