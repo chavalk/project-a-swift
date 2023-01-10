@@ -19,7 +19,7 @@ class DatabaseManager {
     let tablesPath: String = "tables"
     
     func collectionTables() -> AnyPublisher<[Table], Error> {
-        db.collection(tablesPath).getDocuments()
+        db.collection(tablesPath).order(by: "number", descending: false).getDocuments()
             .tryMap(\.documents)
             .tryMap { snapshots in
                 try snapshots.map({
