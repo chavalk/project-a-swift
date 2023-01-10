@@ -30,6 +30,7 @@
 		BEEBF7692968BF6400786CA6 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BEEBF7682968BF6400786CA6 /* FirebaseStorageCombine-Community */; };
 		BEEBF771296CE1ED00786CA6 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF770296CE1ED00786CA6 /* Row.swift */; };
 		BEEBF773296D137600786CA6 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF772296D137600786CA6 /* Table.swift */; };
+		BEEBF776296D15AC00786CA6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEBF775296D15AC00786CA6 /* DatabaseManager.swift */; };
 		BEFF15AE2942731300CA6CD1 /* ThreeColumnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFF15AD2942731300CA6CD1 /* ThreeColumnTableViewCell.swift */; };
 		BEFF15B02942F52A00CA6CD1 /* ThreeColumnHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFF15AF2942F52A00CA6CD1 /* ThreeColumnHeaderUIView.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		BEEBF7552968BCF600786CA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEEBF770296CE1ED00786CA6 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		BEEBF772296D137600786CA6 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		BEEBF775296D15AC00786CA6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		BEFF15AD2942731300CA6CD1 /* ThreeColumnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumnTableViewCell.swift; sourceTree = "<group>"; };
 		BEFF15AF2942F52A00CA6CD1 /* ThreeColumnHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColumnHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 		BEE829242939CB0500F1975C /* Project A */ = {
 			isa = PBXGroup;
 			children = (
+				BEEBF774296D153900786CA6 /* Networking */,
 				BE0951442941085500E8A69F /* Model */,
 				BE8269CC293EF1DF00197E22 /* Views */,
 				BE09514729419BD700E8A69F /* Controllers */,
@@ -153,6 +156,14 @@
 				BEEBF7552968BCF600786CA6 /* GoogleService-Info.plist */,
 			);
 			path = "Project A";
+			sourceTree = "<group>";
+		};
+		BEEBF774296D153900786CA6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BEEBF775296D15AC00786CA6 /* DatabaseManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 				BE8427A32948CE16003B1EE2 /* MainTabBarViewController.swift in Sources */,
 				BEEBF771296CE1ED00786CA6 /* Row.swift in Sources */,
 				BE09514B29419CF000E8A69F /* TableViewController.swift in Sources */,
+				BEEBF776296D15AC00786CA6 /* DatabaseManager.swift in Sources */,
 				BEE829262939CB0500F1975C /* AppDelegate.swift in Sources */,
 				BE8427A52948CEF0003B1EE2 /* SavedViewController.swift in Sources */,
 				BE8269CE293EF46D00197E22 /* TwoColumnTableViewCell.swift in Sources */,
