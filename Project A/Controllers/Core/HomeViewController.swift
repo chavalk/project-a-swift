@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewController: UIViewController {
 
+    private var viewModel = HomeViewViewModel()
+    private var subscriptions: Set<AnyCancellable> = []
+    
     private let homeFeedTable = UITableView(frame: .zero, style: .grouped)
     var rows: [Row] = []
     
@@ -19,6 +23,8 @@ class HomeViewController: UIViewController {
         configureTableView()
         let headerView = HeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
         homeFeedTable.tableHeaderView = headerView
+        bindViews()
+        viewModel.fetchTables()
     }
 
     func configureTableView() {
@@ -37,11 +43,20 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
     }
+    
+    func bindViews() {
+        viewModel.$tables.sink { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.homeFeedTable.reloadData()
+            }
+        }
+        .store(in: &subscriptions)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rows.count
+        return viewModel.tables.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
