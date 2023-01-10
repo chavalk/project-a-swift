@@ -27,9 +27,9 @@ class TwoColumnTableViewCell: UITableViewCell {
         fatalError()
     }
     
-    func set(row: Row) {
-        rankLabel.text = row.rank
-        nameLabel.text = row.name
+    func set(with number: String, tableName: String) {
+        rankLabel.text = number
+        nameLabel.text = tableName
     }
     
     func setRankLabelConstraints() {
