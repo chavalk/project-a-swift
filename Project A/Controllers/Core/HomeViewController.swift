@@ -61,8 +61,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TwoColumnTableViewCell.identifier) as! TwoColumnTableViewCell
-        let row = rows[indexPath.row]
-        cell.set(row: row)
+        let tableModel = viewModel.tables[indexPath.row]
+        cell.set(with: tableModel.number, tableName: tableModel.tableName)
         return cell
     }
     
