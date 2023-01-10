@@ -6,3 +6,24 @@
 //
 
 import Foundation
+import Combine
+
+final class HomeViewViewModel: ObservableObject {
+    
+    @Published var error: String?
+    @Published var tables: [Table] = []
+    
+    private var subscriptions: Set<AnyCancellable> = []
+    
+    func fetchTables() {
+        DatabaseManager.shared.collectionTables()
+            .sink { [weak self] completion in
+                if case .failure(let error) = completion {
+                    self?.error = error.localizedDescription
+                }
+            } receiveValue: { [weak self] retrievedTables in
+                self?.tables = retrievedTables
+            }
+            .store(in: &subscriptions)
+    }
+}
