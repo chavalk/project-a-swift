@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct Item {
-    let rank: String
-    let firstColumn: String
-    let secondColumn: String
+struct Item: Codable {
+    let number: String
+    let tableName: String
 }

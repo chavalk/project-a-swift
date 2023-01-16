@@ -8,6 +8,6 @@
 import Foundation
 
 struct Table: Codable {
-    let number: String
     let tableName: String
+    let tableItems: [Item]
 }
