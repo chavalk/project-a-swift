@@ -11,7 +11,7 @@ import Combine
 final class HomeViewViewModel: ObservableObject {
     
     @Published var error: String?
-    @Published var tables: [Table] = []
+    @Published var table: [Table] = []
     
     private var subscriptions: Set<AnyCancellable> = []
     
@@ -22,7 +22,7 @@ final class HomeViewViewModel: ObservableObject {
                     self?.error = error.localizedDescription
                 }
             } receiveValue: { [weak self] retrievedTables in
-                self?.tables = retrievedTables
+                self?.table = retrievedTables
             }
             .store(in: &subscriptions)
     }
