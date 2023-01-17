@@ -18,14 +18,9 @@ class DatabaseManager {
     let db = Firestore.firestore()
     let tablesPath: String = "tables"
     
-    func collectionTables() -> AnyPublisher<[Table], Error> {
-        db.collection(tablesPath).order(by: "number", descending: false).getDocuments()
-            .tryMap(\.documents)
-            .tryMap { snapshots in
-                try snapshots.map({
-                    try $0.data(as: Table.self)
-                })
-            }
+    func collectionTables(retrieve id: String) -> AnyPublisher<Table, Error> {
+        db.collection(tablesPath).document(id).getDocument()
+            .tryMap { try $0.data(as: Table.self) }
             .eraseToAnyPublisher()
     }
 }
