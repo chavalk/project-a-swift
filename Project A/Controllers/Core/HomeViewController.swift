@@ -45,9 +45,10 @@ class HomeViewController: UIViewController {
     }
     
     func bindViews() {
-        viewModel.$table.sink { table in
-            guard let table = table else { return }
-            print(table)
+        viewModel.$table.sink { [weak self] table in
+            DispatchQueue.main.async {
+                self?.homeFeedTable.reloadData()
+            }
         }
         .store(in: &subscriptions)
     }
@@ -60,6 +61,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TwoColumnTableViewCell.identifier) as! TwoColumnTableViewCell
+        let tableItemModel = viewModel.table?.tableItems[indexPath.row]
+        cell.configureTable(with: tableItemModel?.number ?? "", tableName: tableItemModel?.tableName ?? "")
         return cell
     }
     

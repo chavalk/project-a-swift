@@ -31,9 +31,9 @@ class ThreeColumnTableViewCell: UITableViewCell {
     }
     
     func set(item: Item) {
-        rankLabel.text = item.rank
-        firstColumnLabel.text = item.firstColumn
-        secondColumnLabel.text = item.secondColumn
+//        rankLabel.text = item.rank
+//        firstColumnLabel.text = item.firstColumn
+//        secondColumnLabel.text = item.secondColumn
     }
     
     func setRankLabelConstraints() {
