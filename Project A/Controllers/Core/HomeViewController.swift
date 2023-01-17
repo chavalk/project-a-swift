@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         let headerView = HeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
         homeFeedTable.tableHeaderView = headerView
         bindViews()
-        viewModel.fetchTables()
+        viewModel.retireveTable(with: "V3bRdycPyUensGRV32ZF")
     }
 
     func configureTableView() {
@@ -45,19 +45,21 @@ class HomeViewController: UIViewController {
     }
     
     func bindViews() {
-        viewModel.$table.sink
+        viewModel.$table.sink { table in
+            guard let table = table else { return }
+            print(table)
+        }
+        .store(in: &subscriptions)
     }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.tables.count
+        return viewModel.table?.tableItems.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TwoColumnTableViewCell.identifier) as! TwoColumnTableViewCell
-        let tableModel = viewModel.tables[indexPath.row]
-        cell.set(with: tableModel.number, tableName: tableModel.tableName)
         return cell
     }
     
