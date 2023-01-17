@@ -11,13 +11,13 @@ class TwoColumnTableViewCell: UITableViewCell {
 
     static let identifier = "TwoColumnTableViewCell"
     
-    private let rankLabel = UILabel()
-    private let nameLabel = UILabel()
+    private let numberLabel = UILabel()
+    private let tableNameLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(rankLabel)
-        contentView.addSubview(nameLabel)
+        contentView.addSubview(numberLabel)
+        contentView.addSubview(tableNameLabel)
         
         setRankLabelConstraints()
         setNameLabelConstraints()
@@ -27,22 +27,22 @@ class TwoColumnTableViewCell: UITableViewCell {
         fatalError()
     }
     
-    func set(with number: String, tableName: String) {
-        rankLabel.text = number
-        nameLabel.text = tableName
+    func configureTable(with number: String, tableName: String) {
+        numberLabel.text = number
+        tableNameLabel.text = tableName
     }
     
     func setRankLabelConstraints() {
-        rankLabel.translatesAutoresizingMaskIntoConstraints = false
-        rankLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        rankLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-        rankLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        numberLabel.translatesAutoresizingMaskIntoConstraints = false
+        numberLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        numberLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+        numberLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
     func setNameLabelConstraints() {
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: rankLabel.trailingAnchor, constant: 25).isActive = true
-        nameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        tableNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        tableNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        tableNameLabel.leadingAnchor.constraint(equalTo: numberLabel.trailingAnchor, constant: 25).isActive = true
+        tableNameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
 }
