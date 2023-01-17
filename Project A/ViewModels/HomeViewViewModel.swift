@@ -10,19 +10,19 @@ import Combine
 
 final class HomeViewViewModel: ObservableObject {
     
+    @Published var table: Table?
     @Published var error: String?
-    @Published var table: [Table] = []
     
     private var subscriptions: Set<AnyCancellable> = []
     
-    func fetchTables() {
-        DatabaseManager.shared.collectionTables()
+    func retireveTable(with id: String) {
+        DatabaseManager.shared.collectionTables(retrieve: id)
             .sink { [weak self] completion in
                 if case .failure(let error) = completion {
                     self?.error = error.localizedDescription
                 }
-            } receiveValue: { [weak self] retrievedTables in
-                self?.table = retrievedTables
+            } receiveValue: { [weak self] table in
+                self?.table = table
             }
             .store(in: &subscriptions)
     }

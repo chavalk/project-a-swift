@@ -45,12 +45,7 @@ class HomeViewController: UIViewController {
     }
     
     func bindViews() {
-        viewModel.$tables.sink { [weak self] _ in
-            DispatchQueue.main.async {
-                self?.homeFeedTable.reloadData()
-            }
-        }
-        .store(in: &subscriptions)
+        viewModel.$table.sink
     }
 }
 
