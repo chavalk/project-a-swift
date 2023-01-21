@@ -23,4 +23,10 @@ class DatabaseManager {
             .tryMap { try $0.data(as: Table.self) }
             .eraseToAnyPublisher()
     }
+    
+    func collectionTables(retrieve1 id: String) -> AnyPublisher<Table1, Error> {
+        db.collection(tablesPath).document(id).getDocument()
+            .tryMap { try $0.data(as: Table1.self) }
+            .eraseToAnyPublisher()
+    }
 }
