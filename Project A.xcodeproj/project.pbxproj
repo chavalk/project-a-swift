@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE09514B29419CF000E8A69F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09514A29419CF000E8A69F /* TableViewController.swift */; };
 		BE09514D2941AC5A00E8A69F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09514C2941AC5A00E8A69F /* Item.swift */; };
+		BE7BC720297CAD7100E4A2A8 /* TableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7BC71F297CAD7100E4A2A8 /* TableViewViewModel.swift */; };
 		BE8269CE293EF46D00197E22 /* TwoColumnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */; };
 		BE8269D2293F108D00197E22 /* HeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8269D1293F108D00197E22 /* HeaderUIView.swift */; };
 		BE8427A32948CE16003B1EE2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8427A22948CE16003B1EE2 /* MainTabBarViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		BE09514A29419CF000E8A69F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BE09514C2941AC5A00E8A69F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BE7BC71F297CAD7100E4A2A8 /* TableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModel.swift; sourceTree = "<group>"; };
 		BE8269CD293EF46D00197E22 /* TwoColumnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnTableViewCell.swift; sourceTree = "<group>"; };
 		BE8269D1293F108D00197E22 /* HeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUIView.swift; sourceTree = "<group>"; };
 		BE8427A22948CE16003B1EE2 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEBF778296D1EB600786CA6 /* HomeViewViewModel.swift */,
+				BE7BC71F297CAD7100E4A2A8 /* TableViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				BE09514D2941AC5A00E8A69F /* Item.swift in Sources */,
 				BEF3DEFF297B834000345697 /* Table1.swift in Sources */,
 				BEE829282939CB0500F1975C /* SceneDelegate.swift in Sources */,
+				BE7BC720297CAD7100E4A2A8 /* TableViewViewModel.swift in Sources */,
 				BE8269D2293F108D00197E22 /* HeaderUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
