@@ -23,6 +23,7 @@ class TableViewController: UIViewController {
         configureTableView()
         let headerView = ThreeColumnHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 80))
         tableView.tableHeaderView = headerView
+        bindViews()
     }
     
     func configureTableView() {
@@ -40,6 +41,15 @@ class TableViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
+    }
+    
+    func bindViews() {
+        viewModel.$table1.sink { [weak self] table1 in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+        .store(in: &subscriptions)
     }
 }
 
