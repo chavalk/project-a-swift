@@ -61,8 +61,10 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ThreeColumnTableViewCell.identifier) as! ThreeColumnTableViewCell
-        let item = items[indexPath.row]
-//        cell.set(item: item)
+        let table1ItemModel = viewModel.table1?.tableItems[indexPath.row]
+        cell.configureTable(with: table1ItemModel?.rank ?? "",
+                            country: table1ItemModel?.country ?? "",
+                            amount: table1ItemModel?.amount ?? "")
         return cell
     }
 }
