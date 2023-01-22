@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class TableViewController: UIViewController {
+    
+    private var viewModel = TableViewViewModel()
+    private var subscriptions: Set<AnyCancellable> = []
 
     private let tableView = UITableView(frame: .zero, style: .grouped)
     var items: [Item] = []
