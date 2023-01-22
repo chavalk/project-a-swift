@@ -24,6 +24,7 @@ class TableViewController: UIViewController {
         let headerView = ThreeColumnHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 80))
         tableView.tableHeaderView = headerView
         bindViews()
+        viewModel.retrieveTable1(with: "qxTmX6YAFCz8sLRALqoJ")
     }
     
     func configureTableView() {
